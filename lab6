@@ -1,0 +1,33 @@
+class Student:
+    def __init__(self, name: str, age: int, roll_no: int, course: str) -> None:
+        self.name = name
+        self.age = age
+        self.roll_no = roll_no
+        self.course = course
+
+    def display(self) -> None:
+        print(f"Name: {self.name}")
+        print(f"Age: {self.age}")
+        print(f"Roll No: {self.roll_no}")
+        print(f"Course: {self.course}")
+
+    def __repr__(self) -> str:
+        return (
+            f"Student(name='{self.name}', "
+            f"age={self.age}, "
+            f"roll_no={self.roll_no}, "
+            f"course='{self.course}')"
+        )
+
+
+# Creating object
+student1: Student = Student(
+    "Mallika",
+    22,
+    101,
+    "Computer Science"
+)
+
+student1.display()
+
+print(student1)
